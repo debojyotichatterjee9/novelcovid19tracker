@@ -128,12 +128,10 @@ const IndexPage = () => {
       <Map {...mapSettings} />
 
       <Container type="content" className="text-center home-start">
-        <h2>Still Getting Started?</h2>
-        <p>Run the following in your terminal!</p>
-        <pre>
+        <h2>Dashboard coming soon...</h2>
+        {/* <pre>
           <code>gatsby new [directory]</code>
-        </pre>
-        <p className="note">Note: Gatsby CLI required globally for the above command</p>
+        </pre> */}
       </Container>
     </Layout>
   );
