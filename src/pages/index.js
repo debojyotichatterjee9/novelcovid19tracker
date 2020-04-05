@@ -25,8 +25,8 @@ const IndexPage = () => {
    */
 
   async function mapEffect({ leafletElement: map } = {}) {
+    if (!map) return;
     let response;
-
     try {
       response = await axios.get('https://corona.lmao.ninja/countries');
     } catch (e) {
@@ -58,6 +58,58 @@ const IndexPage = () => {
       })
     }
     // console.log(geoJson);
+
+    const geoJsonLayers = new L.GeoJSON(geoJson, {
+      pointToLayer: (feature = {}, latlng) => {
+        const { properties = {} } = feature;
+        let updatedFormatted;
+        let casesString;
+
+        const {
+          country,
+          updated,
+          cases,
+          deaths,
+          recovered
+        } = properties
+
+        casesString = `${cases}`;
+
+        if ( cases > 1000 ) {
+          casesString = `${casesString.slice(0, -3)}k+`
+        }
+
+        if ( updated ) {
+          updatedFormatted = new Date(updated).toLocaleString();
+        }
+
+        const html = `
+          <span class="icon-marker">
+            <span class="icon-marker-tooltip">
+              <h2>${country}</h2>
+              <ul>
+                <li><strong>Confirmed:</strong> ${cases}</li>
+                <li><strong>Deaths:</strong> ${deaths}</li>
+                <li><strong>Recovered:</strong> ${recovered}</li>
+                <li><strong>Last Update:</strong> ${updatedFormatted}</li>
+              </ul>
+            </span>
+            ${ casesString }
+          </span>
+        `;
+
+        return L.marker( latlng, {
+          icon: L.divIcon({
+            className: 'icon',
+            html
+          }),
+          riseOnHover: true
+        });
+      }
+    });
+    
+    geoJsonLayers.addTo(map)
+    
   }
 
   const mapSettings = {
@@ -73,9 +125,7 @@ const IndexPage = () => {
         <title>Home Page</title>
       </Helmet>
 
-      <Map {...mapSettings}>
-
-      </Map>
+      <Map {...mapSettings} />
 
       <Container type="content" className="text-center home-start">
         <h2>Still Getting Started?</h2>
