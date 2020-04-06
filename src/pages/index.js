@@ -1,23 +1,20 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import L from 'leaflet';
-import axios from 'axios';
+import React from "react";
+import Helmet from "react-helmet";
+import L from "leaflet";
+import axios from "axios";
 
-import Layout from 'components/Layout';
-import Container from 'components/Container';
-import Map from 'components/Map';
-
+import Layout from "components/Layout";
+import Container from "components/Container";
+import Map from "components/Map";
 
 const LOCATION = {
   lat: 38.9072,
-  lng: -77.0369
+  lng: -77.0369,
 };
 const CENTER = [LOCATION.lat, LOCATION.lng];
 const DEFAULT_ZOOM = 2;
 
-
 const IndexPage = () => {
-
   /**
    * mapEffect
    * @description Fires a callback once the page renders
@@ -28,7 +25,7 @@ const IndexPage = () => {
     if (!map) return;
     let response;
     try {
-      response = await axios.get('https://corona.lmao.ninja/countries');
+      response = await axios.get("https://corona.lmao.ninja/countries");
     } catch (e) {
       console.log(`Failed to fetch countries: ${e.message}`, e);
       return;
@@ -41,22 +38,22 @@ const IndexPage = () => {
     if (!hasData) return;
 
     const geoJson = {
-      type: 'FeatureCollection',
+      type: "FeatureCollection",
       features: data.map((country = {}) => {
         const { countryInfo = {} } = country;
         const { lat, long: lng } = countryInfo;
         return {
-          type: 'Feature',
+          type: "Feature",
           properties: {
             ...country,
           },
           geometry: {
-            type: 'Point',
-            coordinates: [lng, lat]
-          }
-        }
-      })
-    }
+            type: "Point",
+            coordinates: [lng, lat],
+          },
+        };
+      }),
+    };
     // console.log(geoJson);
 
     const geoJsonLayers = new L.GeoJSON(geoJson, {
@@ -65,21 +62,15 @@ const IndexPage = () => {
         let updatedFormatted;
         let casesString;
 
-        const {
-          country,
-          updated,
-          cases,
-          deaths,
-          recovered
-        } = properties
+        const { country, updated, cases, deaths, recovered } = properties;
 
         casesString = `${cases}`;
 
-        if ( cases > 1000 ) {
-          casesString = `${casesString.slice(0, -3)}k+`
+        if (cases > 1000) {
+          casesString = `${casesString.slice(0, -3)}k+`;
         }
 
-        if ( updated ) {
+        if (updated) {
           updatedFormatted = new Date(updated).toLocaleString();
         }
 
@@ -94,31 +85,36 @@ const IndexPage = () => {
                 <li><strong>Last Update:</strong> ${updatedFormatted}</li>
               </ul>
             </span>
-            ${ casesString }
+            ${casesString}
           </span>
         `;
 
-        return L.marker( latlng, {
+        return L.marker(latlng, {
           icon: L.divIcon({
-            className: 'icon',
-            html
+            className: "icon",
+            html,
           }),
-          riseOnHover: true
+          riseOnHover: true,
         });
-      }
+      },
     });
-    
-    geoJsonLayers.addTo(map)
-    
+
+    geoJsonLayers.addTo(map);
   }
 
   const mapSettings = {
     center: CENTER,
-    defaultBaseMap: 'OpenStreetMap',
+    defaultBaseMap: "OpenStreetMap",
     zoom: DEFAULT_ZOOM,
-    mapEffect
+    mapEffect,
   };
 
+  // let tooltipClickHandler = (event) => {
+  //   var tooltip = document.querySelectorAll(".icon-marker-tooltip");
+  //   tooltip.style.display == ""
+  //     ? (tooltip.style.display = "block")
+  //     : (tooltip.style.display = "");
+  // };
   return (
     <Layout pageName="home">
       <Helmet>

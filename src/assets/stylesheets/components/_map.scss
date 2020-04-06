@@ -49,13 +49,6 @@
   border-radius: 100%;
   box-shadow: 0 2px 5px rgba(black, .9);
 
-  &:hover {
-
-    .icon-marker-tooltip {
-      display: block;
-    }
-
-  }
   &:active {
 
     .icon-marker-tooltip {
@@ -63,7 +56,13 @@
     }
 
   }
+  &:hover {
 
+    .icon-marker-tooltip {
+      display: block;
+    }
+
+  }
 }
 
 .icon-marker-tooltip {
