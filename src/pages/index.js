@@ -8,11 +8,11 @@ import Container from "components/Container";
 import Map from "components/Map";
 
 const LOCATION = {
-  lat: 38.9072,
-  lng: -77.0369,
+  lat: 20.00,
+  lng: 77.00,
 };
 const CENTER = [LOCATION.lat, LOCATION.lng];
-const DEFAULT_ZOOM = 2;
+const DEFAULT_ZOOM = 3;
 
 const IndexPage = () => {
   /**
@@ -99,7 +99,15 @@ const IndexPage = () => {
       },
     });
 
-    geoJsonLayers.addTo(map);
+    await geoJsonLayers.addTo(map);
+    
+    const iconMarkerElem = document.querySelectorAll(".icon-marker")
+  Array.from(iconMarkerElem).forEach((icon) => {
+    icon.onclick = () => {
+      icon.firstElementChild.style.display = icon.firstElementChild.style.display === "block" ? "none" : "block";
+    }
+  });
+
   }
 
   const mapSettings = {
@@ -109,12 +117,6 @@ const IndexPage = () => {
     mapEffect,
   };
 
-  // let tooltipClickHandler = (event) => {
-  //   var tooltip = document.querySelectorAll(".icon-marker-tooltip");
-  //   tooltip.style.display == ""
-  //     ? (tooltip.style.display = "block")
-  //     : (tooltip.style.display = "");
-  // };
   return (
     <Layout pageName="home">
       <Helmet>
