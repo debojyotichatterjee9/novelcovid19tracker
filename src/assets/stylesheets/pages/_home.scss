@@ -1,8 +1,13 @@
 .page-home {
 
+  .map-base {
+    border: thick;
+    border-style: double;
+  }
+
   .map,
   .map-base {
-    height: 100vh;
+    height: 60vh;
   }
 
   main {

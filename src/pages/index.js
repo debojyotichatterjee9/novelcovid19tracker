@@ -6,6 +6,7 @@ import axios from "axios";
 import Layout from "components/Layout";
 import Container from "components/Container";
 import Map from "components/Map";
+import HomeDashboard from 'components/HomeDashboard'
 
 const LOCATION = {
   lat: 20.00,
@@ -126,7 +127,7 @@ const IndexPage = () => {
       <Map {...mapSettings} />
 
       <Container type="content" className="text-center home-start">
-        <h2>Dashboard coming soon...</h2>
+        <HomeDashboard />
         {/* <pre>
           <code>gatsby new [directory]</code>
         </pre> */}
