@@ -23,40 +23,43 @@ const HomeDashboard = () => {
         <Container className="homedashboard">
             <div className="column">
                 <div className="total">
-                    <h4>Total Cases: {data.cases}</h4>
-                    <h4> . </h4>
-                    <h4>Total Deaths: {data.deaths}</h4>  
+                    <h1> ☢ </h1>
+                    <h4>Total</h4>
+                    <h5>Cases: {data.cases}</h5>
+                    <h5>Deaths: {data.deaths}</h5>  
                 </div>
             </div>
             
             <div className="column">
                 <div className="today">
-                    <h4>Today Cases: {data.todayCases}</h4>
-                    <h4> . </h4>
-                    <h4>Today Deaths: {data.todayDeaths}</h4>
+                    <h1> ☢ </h1>
+                    <h4>Today</h4>
+                    <h5>Cases: {data.todayCases}</h5>
+                    <h5>Today Deaths: {data.todayDeaths}</h5>
                 </div>
             </div>
                 
             <div className="column">
                 <div className="stats">
-                    <h4>Recovered: {data.recovered}</h4>
-                    <h4>Active: {data.active}</h4>
-                    <h4>Critical: {data.critical}</h4>
+                    <h1> ⚠ </h1>
+                    <h5>Recovered: {data.recovered}</h5>
+                    <h5>Active: {data.active}</h5>
+                    <h5>Critical: {data.critical}</h5>
                 </div>
             </div>
             
             <div className="column">
                 <div className="other">
-                    <h4>Tests: {data.tests}</h4>
-                    <h4> . </h4>
-                    <h4>Affected Countries: {data.affectedCountries}</h4>
+                    <h1> 👁‍🗨 </h1>
+                    <h5>Tests: {data.tests}</h5>
+                    <h5>Affected Countries: {data.affectedCountries}</h5>
                 </div>
             </div>
         </Container>
         
         <div className="updated">
           <div>
-              <h4>Updated At: {new Date(data.updated).toLocaleString()}</h4>    
+              <h4><code>Updated At: {new Date(data.updated).toLocaleString()}</code></h4>    
           </div>
         </div>
 
