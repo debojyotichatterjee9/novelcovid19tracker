@@ -24,42 +24,42 @@ const HomeDashboard = () => {
             <div className="column">
                 <div className="total">
                     <h1> ☢ </h1>
-                    <h4>Total</h4>
-                    <h5>Cases: {data.cases}</h5>
-                    <h5>Deaths: {data.deaths}</h5>  
+                    <div className="heading">Total</div>
+                    <div className="title">Cases:</div><div className="value">{data.cases}</div>
+                    <div className="title">Deaths:</div><div className="value">{data.deaths}</div>  
                 </div>
             </div>
             
             <div className="column">
                 <div className="today">
                     <h1> ☢ </h1>
-                    <h4>Today</h4>
-                    <h5>Cases: {data.todayCases}</h5>
-                    <h5>Today Deaths: {data.todayDeaths}</h5>
+                    <div className="heading">Today</div>
+                    <div className="title">Cases:</div><div className="value">{data.todayCases}</div>
+                    <div className="title">Deaths:</div><div className="value">{data.todayDeaths}</div>
                 </div>
             </div>
                 
             <div className="column">
                 <div className="stats">
                     <h1> ⚠ </h1>
-                    <h5>Recovered: {data.recovered}</h5>
-                    <h5>Active: {data.active}</h5>
-                    <h5>Critical: {data.critical}</h5>
+                    <div className="title">Recovered:</div><div className="value">{data.recovered}</div>
+                    <div className="title">Active:</div><div className="value">{data.active}</div>
+                    <div className="title">Critical:</div><div className="value">{data.critical}</div>
                 </div>
             </div>
             
             <div className="column">
                 <div className="other">
                     <h1> 👁‍🗨 </h1>
-                    <h5>Tests: {data.tests}</h5>
-                    <h5>Affected Countries: {data.affectedCountries}</h5>
+                    <div className="title">Tests:</div><div className="value">{data.tests}</div>
+                    <div className="title">Affected Countries:</div><div className="value">{data.affectedCountries}</div>
                 </div>
             </div>
         </Container>
         
         <div className="updated">
           <div>
-              <h4><code>Updated At: {new Date(data.updated).toLocaleString()}</code></h4>    
+              <code>Updated At: {new Date(data.updated).toLocaleString()}</code>
           </div>
         </div>
 

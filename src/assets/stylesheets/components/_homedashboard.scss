@@ -18,6 +18,7 @@
 .total {
    background:linear-gradient(to right, #040404, #000000, #656565);
     height: 100%;
+    border-style: inset;
 }
 
 .today {
@@ -36,6 +37,28 @@
 }
 
 .updated {
-    color: $white;
+    color: $red-500;
+    font-weight: bold;
+    margin-top: 5px;
 //    background:linear-gradient(to right, #040404, #000000, #656565);
+}
+.heading {
+    color: #B71C1C;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px;
+}
+.title {
+    color: #FFCA28;
+    font-size: 15px;
+    border-top: groove;
+    border-color: aliceblue
+}
+.value {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #C62828;
+    font-weight: bold;
+    border-bottom: groove;
+    border-color: aliceblue
 }
