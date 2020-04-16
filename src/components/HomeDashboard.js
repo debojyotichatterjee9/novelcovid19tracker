@@ -17,7 +17,7 @@ const HomeDashboard = () => {
         }
         getGlobalTotal(true)
       }, []);
-      console.log(data)
+//      console.log(data)
     return (
     <div>
         <Container className="homedashboard">
