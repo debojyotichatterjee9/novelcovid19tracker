@@ -11,8 +11,8 @@ const ThirdPage = () => {
         <title>Dashboard</title>
       </Helmet>
       <Container type="content" className="text-center">
-        <h1>Dashboard Coming soon3..</h1>
-        <p>🚕</p>
+        <h1>India Dashboard coming soon..</h1>
+        <h1>🛺</h1>
       </Container>
     </Layout>
   );

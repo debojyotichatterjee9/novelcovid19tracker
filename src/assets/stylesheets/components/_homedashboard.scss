@@ -1,3 +1,10 @@
+// Google Fonts
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+
+// Font Variables
+$roboto-slab: 'Roboto Slab', serif;   
+$open-sans: 'Open Sans', sans-serif;
+
 .homedashboard {
     background-color: #455A64;
     color: $white;;
@@ -47,12 +54,14 @@
     font-size: 25px;
     font-weight: bold;
     margin: 10px;
+    font-family: $roboto-slab;
 }
 .title {
     color: #FFCA28;
     font-size: 15px;
     border-top: groove;
-    border-color: aliceblue
+    border-color: aliceblue;
+    font-family: $roboto-slab;
 }
 .value {
     font-size: 20px;
@@ -60,5 +69,23 @@
     color: #C62828;
     font-weight: bold;
     border-bottom: groove;
-    border-color: aliceblue
+    border-color: aliceblue;
+    font-family: $open-sans;
+}
+.glow {
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
 }

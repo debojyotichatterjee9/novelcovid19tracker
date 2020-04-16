@@ -24,7 +24,7 @@ const HomeDashboard = () => {
             <div className="column">
                 <div className="total">
                     <h1> ☢ </h1>
-                    <div className="heading">Total</div>
+                    <div className="heading">TOTAL</div>
                     <div className="title">Cases:</div><div className="value">{data.cases}</div>
                     <div className="title">Deaths:</div><div className="value">{data.deaths}</div>  
                 </div>
@@ -33,7 +33,7 @@ const HomeDashboard = () => {
             <div className="column">
                 <div className="today">
                     <h1> ☢ </h1>
-                    <div className="heading">Today</div>
+                    <div className="heading">TODAY</div>
                     <div className="title">Cases:</div><div className="value">{data.todayCases}</div>
                     <div className="title">Deaths:</div><div className="value">{data.todayDeaths}</div>
                 </div>
@@ -57,7 +57,7 @@ const HomeDashboard = () => {
             </div>
         </Container>
         
-        <div className="updated">
+        <div className="updated glow">
           <div>
               <code>Updated At: {new Date(data.updated).toLocaleString()}</code>
           </div>
