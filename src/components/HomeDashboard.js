@@ -28,11 +28,11 @@ const HomeDashboard = () => {
             <h4>Recovered: {data.recovered}</h4>
             <h4>Active: {data.active}</h4>
             <h4>Critical: {data.critical}</h4>
-            <h4>Updated At: {data.casesPerOneMillion}</h4>
-            <h4>Updated At: {data.deathsPerOneMillion}</h4>
-            <h4>Updated At: {data.tests}</h4>
-            <h4>Updated At: {data.testsPerOneMillion}</h4>
-            <h4>Updated At: {data.affectedCountries}</h4>
+            <h4>Cases Per One Million: {data.casesPerOneMillion}</h4>
+            <h4>Deaths Per One Million: {data.deathsPerOneMillion}</h4>
+            <h4>Tests: {data.tests}</h4>
+            <h4>Tests Per One Million: {data.testsPerOneMillion}</h4>
+            <h4>Affected Countries: {data.affectedCountries}</h4>
         </Container>
     );
 };
