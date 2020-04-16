@@ -16,7 +16,7 @@ const SecondPage = () => {
         }
         getGlobalTotal()
       }, []);
-      console.log(data)
+//      console.log(data)
     
     let renderTableHeader = () => {
         if(data.length > 0) {
