@@ -1,6 +1,6 @@
 .homedashboard {
-    background-color: darkred;
-    color: white;
+    background-color: #455A64;
+    color: $white;;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -12,4 +12,26 @@
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
+  margin: 5px;
+}
+
+.total {
+   background:linear-gradient(to right, #040404, #000000, #656565);
+}
+
+.today {
+    background:linear-gradient(to right, #040404, #000000, #656565);
+}
+
+.stats {
+    background:linear-gradient(to right, #040404, #000000, #656565);
+}
+
+.other {
+    background:linear-gradient(to right, #040404, #000000, #656565);
+}
+
+.updated {
+    color: $white;
+    background:linear-gradient(to right, #040404, #000000, #656565);
 }
