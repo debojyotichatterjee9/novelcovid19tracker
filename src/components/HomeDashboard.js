@@ -19,21 +19,47 @@ const HomeDashboard = () => {
       }, []);
       console.log(data)
     return (
+        <div>
         <Container className="homedashboard">
-            <h4>Updated At: {new Date(data.updated).toLocaleString()}</h4>
-            <h4>Total Cases: {data.cases}</h4>
-            <h4>Total Deaths: {data.deaths}</h4>
-            <h4>Today Cases: {data.todayCases}</h4>
-            <h4>Today Deaths: {data.todayDeaths}</h4>
-            <h4>Recovered: {data.recovered}</h4>
-            <h4>Active: {data.active}</h4>
-            <h4>Critical: {data.critical}</h4>
-            <h4>Cases Per One Million: {data.casesPerOneMillion}</h4>
-            <h4>Deaths Per One Million: {data.deathsPerOneMillion}</h4>
-            <h4>Tests: {data.tests}</h4>
-            <h4>Tests Per One Million: {data.testsPerOneMillion}</h4>
-            <h4>Affected Countries: {data.affectedCountries}</h4>
+        
+        <div className="column">
+            <div className="total">
+                <h4>Total Cases: {data.cases}</h4>
+                <h4>Total Deaths: {data.deaths}</h4>    
+            </div>
+        </div>
+        
+        <div className="column">
+            <div className="today">
+                <h4>Today Cases: {data.todayCases}</h4>
+                <h4>Today Deaths: {data.todayDeaths}</h4>
+            </div>
+        </div>
+            
+        <div className="column">
+            <div className="stats">
+                <h4>Recovered: {data.recovered}</h4>
+                <h4>Active: {data.active}</h4>
+                <h4>Critical: {data.critical}</h4>
+            </div>
+        </div>
+        
+        <div className="column">
+            <div className="other">
+                <h4>Tests: {data.tests}</h4>
+                <h4>Affected Countries: {data.affectedCountries}</h4>
+            </div>
+        </div>
+        
+      
+        
+            
         </Container>
+          <div className="">
+            <div className="updated">
+                <h4>Updated At: {new Date(data.updated).toLocaleString()}</h4>    
+            </div></div>
+</div>
     );
 };
 

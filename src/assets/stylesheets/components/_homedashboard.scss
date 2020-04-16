@@ -1,8 +1,15 @@
 .homedashboard {
-    background-color: rgb(47, 43, 43);
+    background-color: darkred;
     color: white;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
 }
