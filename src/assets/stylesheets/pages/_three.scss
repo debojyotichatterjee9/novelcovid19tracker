@@ -1,7 +1,50 @@
+// Google Fonts
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+
+// Font Variables
+$roboto-slab: 'Roboto Slab', serif;   
+$open-sans: 'Open Sans', sans-serif;
+
+
 .page-three {
   
-    h1 {
-      color: rgb(231, 1, 97);
+    background-color: #263238;
+  h1 {
+    color: rgb(41, 182, 72);
+  }
+  
+  .tableHeader {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      text-align: center;
+      background-color: #FFD54F;
+      font-size: 12px;
+      font-weight: bold;
+      color: black;
+      font-family: $roboto-slab;
+  }
+    
+    .flag {
+        height: 20px;
+        width: 30px;
     }
     
-  }
+    .rowStyle {
+        color: $white;
+        font-size: 14px;
+        font-family: $open-sans;
+    }
+    
+    td {
+        border-style: groove;
+        border-width: thin;
+    }
+    
+    .increasing {
+        color: $light-green-A700;
+    }
+    
+    .light-danger {
+        color: $red-500;
+    }
+}
