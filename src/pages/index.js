@@ -1,7 +1,3 @@
-import'bootstrap/dist/css/bootstrap.min.css';
-import $ from'jquery';
-import Popper from 'popper.js';
-import'bootstrap/dist/js/bootstrap.bundle.min';
 import React from "react";
 import Helmet from "react-helmet";
 import L from "leaflet";
@@ -11,7 +7,7 @@ import Layout from "components/Layout";
 import Container from "components/Container";
 import Map from "components/Map";
 import HomeDashboard from 'components/HomeDashboard'
-
+import 'bootstrap/dist/css/bootstrap.css';
 const LOCATION = {
   lat: 20.00,
   lng: 77.00,
