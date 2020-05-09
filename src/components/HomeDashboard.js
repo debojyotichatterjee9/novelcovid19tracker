@@ -19,7 +19,7 @@ const HomeDashboard = () => {
       }, []);
 //      console.log(data)
     return (
-    <div>
+    <div class="container text-center">
         <Container className="homedashboard">
             <div className="column">
                 <div className="total">
@@ -59,7 +59,7 @@ const HomeDashboard = () => {
         
         <div className="updated glow">
           <div>
-              <code>Updated At: {new Date(data.updated).toLocaleString()}</code>
+              <div class="text-monospace">Updated At: {new Date(data.updated).toLocaleString()}</div>
           </div>
         </div>
 

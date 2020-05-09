@@ -1,9 +1,8 @@
 // Google Fonts
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 // Font Variables
-$roboto-slab: 'Roboto Slab', serif;   
-$open-sans: 'Open Sans', sans-serif;
+$montserrat-sans-serif: 'Montserrat', sans-serif;
 
 .homedashboard {
     background-color: #455A64;
@@ -47,7 +46,7 @@ $open-sans: 'Open Sans', sans-serif;
 }
 
 .updated {
-    color: $red-500;
+    color: $full-white;
     font-weight: bold;
     margin-top: 5px;
 //    background:linear-gradient(to right, #040404, #000000, #656565);
@@ -57,14 +56,14 @@ $open-sans: 'Open Sans', sans-serif;
     font-size: 25px;
     font-weight: bold;
     margin: 10px;
-    font-family: $roboto-slab;
+    font-family: $montserrat-sans-serif;
 }
 .title {
     color: #FFCA28;
     font-size: 15px;
     border-top: groove;
     border-color: aliceblue;
-    font-family: $roboto-slab;
+    font-family: $montserrat-sans-serif;
 }
 .value {
     font-size: 20px;
@@ -73,7 +72,7 @@ $open-sans: 'Open Sans', sans-serif;
     font-weight: bold;
     border-bottom: groove;
     border-color: aliceblue;
-    font-family: $open-sans;
+    font-family: $montserrat-sans-serif;
 }
 .glow {
   color: #fff;

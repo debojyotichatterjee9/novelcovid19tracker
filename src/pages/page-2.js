@@ -16,7 +16,7 @@ const SecondPage = () => {
         }
         getGlobalTotal()
       }, []);
-     console.log(data)
+     // console.log(data)
     
     let renderTableHeader = () => {
         if(data.length > 0) {
@@ -58,10 +58,10 @@ const SecondPage = () => {
       <Helmet>
         <title>🌍Global Dashboard</title>
       </Helmet>
-      <Container type="content" className="text-center">
+      <Container type="content" class="container text-center">
         
-      <h1 id='globalDataTableHeading'>🌍Global Statistics</h1>
-            <table id='globaldataTable'>
+      <h1 id='globalDataTableHeading' class="display-4 text-center">🌍Global Statistics</h1>
+            <table id='globaldataTable' class="table table-bordered table-dark text-center">
                <tbody>
                 <tr>{renderTableHeader()}</tr>
                   {renderTableGlobalData(data)}

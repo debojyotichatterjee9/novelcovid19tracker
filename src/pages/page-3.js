@@ -16,7 +16,7 @@ const ThirdPage = () => {
         }
         getIndiaData()
       }, []);
-     console.log(data)
+     // console.log(data)
     
     let renderTableHeader = () => {
         if(data.length > 0) {
@@ -54,10 +54,10 @@ const ThirdPage = () => {
       <Helmet>
         <title>🌍India Dashboard</title>
       </Helmet>
-      <Container type="content" className="text-center">
+      <Container type="content" class="container text-center">
         
-      <h1 id='indiaDataTableHeading'>🚩India Statistics</h1>
-            <table id='indiadataTable'>
+      <h1 id='indiaDataTableHeading' class="display-4 text-center">🚩India Statistics</h1>
+            <table id='indiadataTable' class="table table-bordered table-dark text-center">
                <tbody>
                 <tr>{renderTableHeader()}</tr>
                   {renderTableIndiaData(data)}
