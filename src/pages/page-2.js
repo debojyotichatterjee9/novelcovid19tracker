@@ -63,7 +63,7 @@ const SecondPage = () => {
       </Helmet>
       <Container className="container text-center">
 
-        <h1 id='globalDataTableHeading' className="display-4 text-center">🌍Global Statistics</h1>
+        <h1 id='globalDataTableHeading' className="display-4 text-center">Global Stats</h1>
         <Table striped bordered hover variant="dark" responsive="xl" id='globaldataTable'>
           <thead>
             <tr>{renderTableHeader()}</tr>
