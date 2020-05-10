@@ -6,8 +6,10 @@ import axios from "axios";
 import Layout from "components/Layout";
 import Container from "components/Container";
 import Map from "components/Map";
-import HomeDashboard from 'components/HomeDashboard'
+import HomeDashboard from 'components/HomeDashboard';
+
 import 'bootstrap/dist/css/bootstrap.css';
+
 const LOCATION = {
   lat: 20.00,
   lng: 77.00,
