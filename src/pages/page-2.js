@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import axios from "axios";
 import Layout from 'components/Layout';
 import Container from 'components/Container';
+import Table from 'react-bootstrap/Table';
 
 const SecondPage = () => {
     const [data, setData] = useState({ globalData: [] });
@@ -58,16 +59,18 @@ const SecondPage = () => {
       <Helmet>
         <title>🌍Global Dashboard</title>
       </Helmet>
-      <Container type="content" class="container text-center">
+      <Container type="content" class="">
         
       <h1 id='globalDataTableHeading' class="display-4 text-center">🌍Global Statistics</h1>
-            <table id='globaldataTable' class="table table-bordered table-dark text-center">
-               <tbody>
+            <Table responsive striped bordered hover variant="dark" id='globaldataTable' class="table table-bordered table-dark text-center">
+               <thead>
                 <tr>{renderTableHeader()}</tr>
+               </thead>
+               <tbody>
                   {renderTableGlobalData(data)}
-               </tbody>
-            </table>
-      
+               </tbody>               
+            </Table>
+
       </Container>
     </Layout>
   );
