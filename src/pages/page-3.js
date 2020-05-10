@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import axios from "axios";
 import Layout from 'components/Layout';
 import Container from 'components/Container';
+import Table from 'react-bootstrap/Table';
 
 const ThirdPage = () => {
   const [data, setData] = useState({ indiaData: [] });
@@ -54,15 +55,17 @@ const ThirdPage = () => {
       <Helmet>
         <title>🌍India Dashboard</title>
       </Helmet>
-      <Container type="content" class="container text-center">
+      <Container type="content" className="container text-center">
         
-      <h1 id='indiaDataTableHeading' class="display-4 text-center">🚩India Statistics</h1>
-            <table id='indiadataTable' class="table table-bordered table-dark text-center">
+      <h1 id='indiaDataTableHeading' className="display-4 text-center">🚩India Statistics</h1>
+            <Table striped bordered hover variant="dark" responsive="xl" id='indiadataTable'>
+              <thead>
+              <tr>{renderTableHeader()}</tr>
+              </thead>
                <tbody>
-                <tr>{renderTableHeader()}</tr>
                   {renderTableIndiaData(data)}
                </tbody>
-            </table>
+            </Table>
       
       </Container>
     </Layout>

@@ -6,7 +6,7 @@ import { Navbar, Nav, Button, NavDropdown, Form, FormControl } from 'react-boots
 const Header = () => {
     return (
         <header>
-<Navbar bg="dark" expand="lg" fixed="top" variant="dark">
+<Navbar bg="dark" expand="sm" fixed="top" variant="dark">
   <Navbar.Brand href="/">COVID19 Tracker</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">

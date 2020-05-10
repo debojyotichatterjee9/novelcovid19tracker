@@ -6,6 +6,9 @@ import 'assets/stylesheets/application.scss';
 
 import Header from 'components/Header';
 import Footer from 'components/Footer';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const Layout = ({ children, pageName }) => {
   let className = '';
@@ -15,16 +18,22 @@ const Layout = ({ children, pageName }) => {
   }
 
   return (
-    <>
+    <Container fluid="lg">
       <Helmet bodyAttributes={{ class: className }}>
         <title>Gatsby Site</title>
       </Helmet>
-      <div className="wrapper">
-        <Header />
-        <main>{ children }</main>
-        <Footer />
-      </div>
-    </>
+      <Row>
+        <Col><Header /></Col>
+      </Row>
+      <Row>
+        <Col><main>{children}</main></Col>
+      </Row>
+      <Row>
+        <Col>
+          <Footer />
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
