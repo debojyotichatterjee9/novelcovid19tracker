@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "author": "Debojyoti Chatterjee <debojyoti.chatterjee9@gmail.com>",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.4.1",
     "gatsby": "^2.20.12",
     "gatsby-plugin-react-helmet": "^3.2.1",
